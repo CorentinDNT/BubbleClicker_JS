@@ -1,0 +1,17 @@
+//UTILS
+@import "./utils/variables";
+@import "./utils/function";
+@import "./utils/mixins";
+@import "./utils/animations";
+
+//COMPONENTS
+
+//LAYOUT
+@import "./layout/header";
+@import "./layout/footer";
+
+//PAGES
+@import "./pages/index";
+
+//BASE
+@import "./base/base";

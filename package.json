@@ -1,0 +1,11 @@
+{
+	"name": "bubbleclicker_js",
+	"version": "1.0.0",
+	"description": "BubbleClicker_JS",
+	"main": "index.js",
+	"scripts": {
+		"sass": "sass --watch ./sass/main.scss:./css/style.css"
+	},
+	"author": "",
+	"license": "ISC"
+}
