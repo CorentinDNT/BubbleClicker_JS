@@ -1,0 +1,8 @@
+@keyframes anim {
+	to {
+		top: -250px;
+		left: var(--left);
+		opacity: 1;
+		filter: hue-rotate(720deg);
+	}
+}
