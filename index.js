@@ -1,3 +1,5 @@
+const startButton = document.querySelector("#start_btn");
+const stopButton = document.querySelector("#stop_btn");
 const killedNumber = document.querySelector("h3");
 let counter = 0;
 
@@ -27,4 +29,9 @@ const bubbleCreator = () => {
 	}, 8000);
 };
 
-// setInterval(bubbleCreator, 300);
+startButton.addEventListener("click", (e) => {
+	const spawnBubble = setInterval(bubbleCreator, 300);
+	stopButton.addEventListener("click", (e) => {
+		clearInterval(spawnBubble);
+	});
+});
