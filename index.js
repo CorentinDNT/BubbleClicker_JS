@@ -60,6 +60,7 @@ startButton.addEventListener("click", (e) => {
 	setInterval(() => {
 		clearInterval(scoreInterval);
 	}, 49000);
+	timer.innerHTML = 45;
 	// stopButton.addEventListener("click", (e) => {
 	// 	clearInterval(spawnBubble);
 	// });
