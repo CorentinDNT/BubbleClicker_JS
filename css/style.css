@@ -33,6 +33,7 @@ h3 {
 }
 
 .btn {
+  overflow: hidden;
   border: none;
   outline-style: none;
   border-radius: 15px;
@@ -45,10 +46,12 @@ h3 {
   background-repeat: no-repeat;
   background-size: 200% 100%;
   background-position: right bottom;
+  background-position: left bottom;
   transition: background-position 0.25s ease-out;
 }
 .btn:nth-child(1):hover {
   background-position: left bottom;
+  background-position: right bottom;
 }
 .btn:nth-child(2) {
   background: linear-gradient(90deg, #eb4034 0%, #eb4034 50%, #32a852 50%, #32a852 100%);
@@ -61,6 +64,16 @@ h3 {
 .btn:nth-child(2):hover {
   background-position: left bottom;
   background-position: right bottom;
+}
+
+#timer {
+  position: absolute;
+  top: -0.5px;
+  left: 3%;
+  overflow: hidden;
+  font-size: 3rem;
+  text-align: end;
+  margin: 0;
 }
 
 body {

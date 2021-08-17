@@ -1,5 +1,7 @@
+const body = document.querySelector("#body");
 const startButton = document.querySelector("#start_btn");
-const stopButton = document.querySelector("#stop_btn");
+// const stopButton = document.querySelector("#stop_btn");
+const timer = document.querySelector("#timer");
 const killedNumber = document.querySelector("h3");
 let counter = 0;
 
@@ -29,9 +31,36 @@ const bubbleCreator = () => {
 	}, 8000);
 };
 
+timer.innerHTML = 45;
+
+timer.style.visibility = "hidden";
+
 startButton.addEventListener("click", (e) => {
+	startButton.style.visibility = "hidden";
+	// stopButton.style.visibility = "hidden";
+
+	timer.style.visibility = "visible";
+	const inter = setInterval(() => {
+		timer.innerHTML--;
+	}, 1000);
+
 	const spawnBubble = setInterval(bubbleCreator, 300);
-	stopButton.addEventListener("click", (e) => {
+	setInterval(() => {
 		clearInterval(spawnBubble);
-	});
+		clearInterval(inter);
+
+		startButton.style.visibility = "visible";
+		// stopButton.style.visibility = "visible";
+		timer.style.visibility = "hidden";
+	}, 45000);
+	const scoreInterval = setInterval(() => {
+		alert("Votre score est de " + counter);
+	}, 48500);
+
+	setInterval(() => {
+		clearInterval(scoreInterval);
+	}, 49000);
+	// stopButton.addEventListener("click", (e) => {
+	// 	clearInterval(spawnBubble);
+	// });
 });
